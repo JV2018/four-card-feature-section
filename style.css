@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, main, article, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 5rem 0;
+    font-family: 'Poppins', sans-serif;
+    color: #4D4F62;
+    background-color: #F2F2F2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 19.4375rem;
+}
+
+header {
+    margin-bottom: 4.75rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+header h1 span {
+    display: block;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+ul {
+    display: grid;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+
+li:nth-of-type(1) article {
+    border-top: 3.5px solid #44D3D2;
+}
+
+li:nth-of-type(2) article {
+    border-top: 3.5px solid #EA5454;
+}
+
+li:nth-of-type(3) article {
+    border-top: 3.5px solid #FCAE4A;
+}
+
+li:nth-of-type(4) article {
+    border-top: 3.5px solid #549EF2;
+}
+
+article {
+    background-color: #FFF;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 0.5);
+}
+
+article h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+article p {
+    margin-bottom: 2rem;
+    font-size: 0.75rem;
+    line-height: 2;
+}
+
+article img {
+    width: 3.5625rem;
+    align-self: end;
+    justify-self: end;
+}
