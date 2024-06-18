@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6, p, main, article, ul, li {
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 5rem 2rem;
     font-family: 'Poppins', sans-serif;
     color: #4D4F62;
     background-color: #F2F2F2;
@@ -19,16 +19,15 @@ body {
     align-items: center;
 }
 .container {
-    /* max-width: 19.4375rem; */
     max-width: 69.375rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem 2rem;
 }
 
 header {
+    max-width: 33.75rem;
     margin-bottom: 4.75rem;
     text-align: center;
 }
@@ -48,6 +47,7 @@ header h1 span {
 header p {
     font-size: 1rem;
     line-height: 1.5;
+    letter-spacing: 0.00625;
 }
 
 ul {
@@ -94,12 +94,12 @@ article p {
 }
 
 article img {
-    max-width: 4rem;
+    max-width: 3.5625rem;
     align-self: end;
     justify-self: end;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
     ul {
         gap: 1.875rem;
         grid-template-columns: repeat(3, 1fr);
@@ -127,16 +127,24 @@ article img {
         grid-area: calculator;
     }
 
-    .container {
-        padding: 5rem 0;
+    header {
+        margin-bottom: 4rem;
+    }
+
+    header h1 {
+        font-size: 2.25rem;
+        letter-spacing: 0.015625rem;
     }
 
     article {
         padding: 2rem;
     }
 
-    header {
-        margin-bottom: 4rem;
+    article p {
+        margin-bottom: 2.5rem;
     }
 
+    article img {
+        max-width: 4rem;
+    }
 }
