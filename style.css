@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6, p, main, article, ul, li {
 
 body {
     margin: 0;
-    padding: 5rem 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     color: #4D4F62;
     background-color: #F2F2F2;
@@ -19,16 +19,24 @@ body {
     align-items: center;
 }
 .container {
-    width: 19.4375rem;
+    /* max-width: 19.4375rem; */
+    max-width: 69.375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
 }
 
 header {
     margin-bottom: 4.75rem;
+    text-align: center;
 }
 
 header h1 {
     font-size: 1.5rem;
     font-weight: 200;
+    letter-spacing: 0.0106rem;
     margin-bottom: 1rem;
 }
 
@@ -49,19 +57,19 @@ ul {
 }
 
 li:nth-of-type(1) article {
-    border-top: 3.5px solid #44D3D2;
+    border-top: 4px solid #44D3D2;
 }
 
 li:nth-of-type(2) article {
-    border-top: 3.5px solid #EA5454;
+    border-top: 4px solid #EA5454;
 }
 
 li:nth-of-type(3) article {
-    border-top: 3.5px solid #FCAE4A;
+    border-top: 4px solid #FCAE4A;
 }
 
 li:nth-of-type(4) article {
-    border-top: 3.5px solid #549EF2;
+    border-top: 4px solid #549EF2;
 }
 
 article {
@@ -80,12 +88,55 @@ article h2 {
 
 article p {
     margin-bottom: 2rem;
-    font-size: 0.75rem;
-    line-height: 2;
+    font-size: 0.8125rem;
+    line-height: 1.77;
+    letter-spacing: 0.005625rem;
 }
 
 article img {
-    width: 3.5625rem;
+    max-width: 4rem;
     align-self: end;
     justify-self: end;
+}
+
+@media (min-width: 1024px) {
+    ul {
+        gap: 1.875rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            ". team-builder ."
+            "supervisor team-builder calculator"
+            "supervisor karma calculator"
+            ". karma .";
+    }
+
+    .supervisor {
+        grid-area: supervisor;
+    }
+
+    .team-builder {
+        grid-area: team-builder;
+    }
+
+    .karma {
+        grid-area: karma;
+    }
+
+    .calculator {
+        grid-area: calculator;
+    }
+
+    .container {
+        padding: 5rem 0;
+    }
+
+    article {
+        padding: 2rem;
+    }
+
+    header {
+        margin-bottom: 4rem;
+    }
+
 }
